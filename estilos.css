@@ -1,0 +1,167 @@
+/* Estilos de los botones */
+h2{
+  border-color:black;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+  border-radius: 8px;
+  font-size: 3rem;
+  text-align: center;
+  background-color: #e63838;
+;
+}
+
+button {
+  border: 5px solid rgb(255, 145, 0);
+  border-radius: 20px;
+  background-color: rgb(210, 105, 30);
+  height: 50px;
+  width: 150px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 15px;
+}
+/* Estilos generales del body */
+body {
+  background-image: url(cheve.jpeg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;  /* La imagen se ajusta completamente sin recortes */
+  background-position: center -50px;  /* Centra la imagen de fondo */
+  height: auto;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;  /* Centra los elementos en la pantalla */
+  justify-content:center;
+  align-items: center;
+  text-align: center;
+  
+}
+.sin-scroll{
+  overflow: hidden;
+}
+/* Media query para pantallas más pequeñas (móviles) */
+@media (max-width: 768px) {
+  body {
+      margin: 0;
+      margin-top: -5%;
+      flex-direction: column;  /* Los botones se apilan verticalmente */
+  }
+  div{
+    margin-top: 80%;
+  }
+}
+.top{
+margin-top: 90%;
+}
+
+/* Media query para pantallas más grandes (escritorios) */
+@media (min-width: 769px) {
+  body {
+      margin-top: 0%;
+      flex-direction: column;  /* Los botones se colocan en una fila en pantallas grandes */
+  }
+  button {
+      width: 50%;  /* Los botones tienen un tamaño fijo en pantallas grandes */
+      height: 50%;
+      font-size: 16px;
+      margin: 10px;  /* Agrega un margen entre los botones */
+  }
+  div{
+    margin-top: 50%;
+  }
+}
+form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+  gap: 5px; /* Espaciado entre los elementos */
+  max-width: 600px;
+  margin: 0 auto; /* Centra el formulario */
+}
+label {
+  border-radius: 5%;
+  background-color: rgba(216, 75, 75, 0.801);
+  display: flex;
+  flex-direction: column; /* Imagen arriba, texto y radio abajo */
+  align-items: center;
+  gap: 0; /* Espacio entre imagen y texto */
+  border: 1px solid #ddd; /* Borde para cada producto */
+  padding: 5px;
+  text-align: center;
+  transition: 0.3s; /* Suaviza el efecto al pasar el mouse */
+}
+.boton{
+  cursor: pointer;
+  
+}
+input{
+  color: #000000;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 25%;
+  width: 6%;
+}
+p{
+  margin-top: 1px;
+  font-size: 11px;
+  margin-bottom: 4px;
+}
+h3{
+  margin-top: 1px;
+  font-size: 15px;
+  margin-bottom: 1px;
+}
+.grande{
+height: auto;
+width: 80%;
+font-size: 40px;
+
+}
+.UnaColum{
+  grid-template-columns:max-content; /*como quieres ordenar tu contenido, por columnas*/
+  display: inline-block; /*ayuda a alinear el contenido en el centro*/
+  padding: 0;
+  margin: 0; /*margen*/
+  margin-top: 4px; /*margen de arriba */
+  
+
+}
+.alinear-horizontal{
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2%;
+}
+select{
+  width: 42%;
+}
+.select-grande{
+  width: 67%;
+}
+.input-coment{
+  width: 70%;
+}
+.aifon{
+  width: 8%;
+}
+.informe{
+  font-size: 2rem;
+}
+.div-informe{
+  margin-top: 2%;
+}
+.oculto{
+  display: none;
+}
+.vertical{
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.coment{
+  width:70%;
+  height: auto;
+  font: 100px;
+}
+

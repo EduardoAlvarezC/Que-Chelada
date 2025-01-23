@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QueChelada!</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="ordenar.js" defer></script>
+</head>
+<body >
+    <h2>LAS MICHES!</h2>
+    <h3>>>>>>>>Toca la imagen para agregar<<<<<<<</h3>
+    <form action="ordenar.js" id="form1">
+        <label class="boton" >
+            <img src="img/miches1.jpeg" width="100%" height="100%" class="boton" id="incremento1">
+            <h3 id="articulo1">CAMARONERA</h3>
+            <h3 id="precio1">$130</h3>
+            <P>Mix de salsas con limón y sal, clamato y tu escarchado favorito acompañado con 2 brochetas de camarones</P>
+            <div class="alinear-horizontal">
+            <select name="cerveza" id="tipoCerveza1">
+                <option value="" disabled selected>Cerveza</option>
+                <option value="Indio">Indio</option>
+                <option value="Tecate">Tecate</option>
+                <option value="XX Lager">XX Lager</option>
+                <option value="Modelo">Modelo</option>
+            </select>
+            <input type="number" id="cantidad1" value="0" min="0" max="10" readonly>
+            <select name="Escarchado" id="tipoEscarchado1">
+                <option value="" disabled selected>Escarchado</option>
+                <option value="Fresa">Fresa</option>
+                <option value="Mango">Mango</option>
+                <option value="Sandia">Sandia</option>
+                <option value="Mora">Mora</option>
+            </select>
+            </div>
+        </label>
+        <label class="boton">
+            <img src="img/miches2.jpeg"  width="100%" height="100%" class="boton" id="incremento2">
+            <h3 id="articulo2">MICHE'AGUACHILE/ /CEVICHELADA</h3>
+            <h3 id="precio2">$130</h3>
+                <P>Mix de salsas con limón y sal, clamato y tu escarchado favorito acompañado con aguachile o ceviche de la casa</P>
+                <div class="alinear-horizontal">
+                    <select name="cerveza" id="tipoCerveza2">
+                        <option value="" disabled selected>Cerveza</option>
+                        <option value="Indio">Indio</option>
+                        <option value="Tecate">Tecate</option>
+                        <option value="XX Lager">XX Lager</option>
+                        <option value="Modelo">Modelo</option>
+                    </select>
+                    <input type="number" id="cantidad2" value="0" min="0" max="10" readonly>
+                    <select name="Escarchado" id="tipoEscarchado2">
+                        <option value="" disabled selected>Escarchado</option>
+                        <option value="Fresa">Fresa</option>
+                        <option value="Mago">Mango</option>
+                        <option value="Sandia">Sandia</option>
+                        <option value="Mora">Mora</option>
+                    </select>
+                    </div>
+                    <select id="toping">
+                        <option value="" disabled selected>Toping</option>
+                        <option value="aguachile">Aguachile</option>
+                        <option value="ceviche">Ceviche</option>
+                    </select>
+        </label>
+        <label class="boton">
+            <img src="img/miches3.jpg"  width="100%" height="100%" class="boton" id="incremento3">
+            <h3 id="articulo3">CHELADA </h3>
+            <h3 id="precio3">$70</h3>
+            <p>Escarchado y preparado de limón y sal</p>
+            <div class="alinear-horizontal">
+                <select name="cerveza" id="tipoCerveza3">
+                    <option value="" disabled selected>Cerveza</option>
+                    <option value="Indio">Indio</option>
+                    <option value="Tecate">Tecate</option>
+                    <option value="XX Lager">XX Lager</option>
+                    <option value="Modelo">Modelo</option>
+                </select>
+                <input type="number" id="cantidad3" value="0" min="0" max="10" readonly>
+                <select name="Escarchado" id="tipoEscarchado3">
+                    <option value="" disabled selected>Escarchado</option>
+                    <option value="Fresa">Fresa</option>
+                    <option value="Mango">Mango</option>
+                    <option value="Sandia">Sandia</option>
+                    <option value="Mora">Mora</option>
+                </select>
+                </div>
+            
+        </label>
+        <label class="boton">
+            <img src="img/miches4.jfif"  width="100%" height="100%" class="boton" id="incremento4">
+            <h3 id="articulo4">CLAMACHELA </h3>
+            <h3 id="precio4">$85</h3>
+            <P>Clamato, mix de salsas con limón y sal y tu escarchado favorito acompañado de un tarugo</P>
+            <div class="alinear-horizontal">
+            <select name="cerveza" id="tipoCerveza4">
+                <option value="" disabled selected>Cerveza</option>
+                <option value="Indio">Indio</option>
+                <option value="Tecate">Tecate</option>
+                <option value="XX Lager">XX Lager</option>
+                <option value="Modelo">Modelo</option>
+            </select>
+            <input type="number" id="cantidad4" value="0" min="0" max="10" readonly>
+            <select name="Escarchado" id="tipoEscarchado4">
+                <option value="" disabled selected>Escarchado</option>
+                <option value="Fresa">Fresa</option>
+                <option value="Mango">Mango</option>
+                <option value="Sandia">Sandia</option>
+                <option value="Mora">Mora</option>
+            </select>
+        </div>
+        </label>
+        <label class="boton">
+            <img src="img/miches5.jfif"  width="100%" height="100%" class="boton" id="incremento5">
+            <H3 id="articulo5">MICHELADA</H3>
+            <h3 id="precio5">$70</h3>
+            <p>Mix de salsas con limon y sal y tu escarchado favorito acompañado de un tarugo</p>
+            <div class="alinear-horizontal">
+            <select name="cerveza" id="tipoCerveza5">
+                <option value="" disabled selected>Cerveza</option>
+                <option value="Indio">Indio</option>
+                <option value="Tecate">Tecate</option>
+                <option value="XX Lager">XX Lager</option>
+                <option value="Modelo">Modelo</option>
+            </select>
+            <input type="number" id="cantidad5" value="0" min="0" max="10" readonly>
+            <select name="Escarchado" id="tipoEscarchado5">
+                <option value="" disabled selected>Escarchado</option>
+                <option value="Fresa">Fresa</option>
+                <option value="Mango">Mango</option>
+                <option value="Sandia">Sandia</option>
+                <option value="Mora">Mora</option>
+            </select>
+        </div>
+        </label>
+        <label class="boton">
+            <img src="img/miches6.webp"  width="100%" height="100%" class="boton" id="incremento6">
+            <h3 id="articulo6">GOMICHELA </h3>
+            <h3 id="precio6">$120</h3>
+            <p>Chamoy, clamato, mix de salsas con limón y sal acompañado con bowl de gomitas</p>
+            <div class="alinear-horizontal">
+            <select name="cerveza" id="tipoCerveza6">
+                <option value="" disabled selected>Cerveza</option>
+                <option value="Indio">Indio</option>
+                <option value="Tecate">Tecate</option>
+                <option value="XX Lager">XX Lager</option>
+                <option value="Modelo">Modelo</option>
+            </select>
+            <input type="number" id="cantidad6" value="0" min="0" max="10" readonly>
+            <select name="Escarchado" id="tipoEscarchado6">
+                <option value="" disabled selected>Escarchado</option>
+                <option value="Fresa">Fresa</option>
+                <option value="Mango">Mango</option>
+                <option value="Sandia">Sandia</option>
+                <option value="Mora">Mora</option>
+            </select>
+        </div>
+        </label>
+        <label class="boton">
+            <img src="img/miches7.webp"  width="100%" height="100%" class="boton" id="incremento7">
+            <h3 id="articulo7">CHAMOCHELA </h3>
+            <h3 id="precio7">$80</h3>
+            <p>Chamoy, mix de salsas con limón y sal y tu escarchado favorito acompañado de un tarugo</p>
+            <div class="alinear-horizontal">
+            <select name="cerveza" id="tipoCerveza7">
+                <option value="" disabled selected>Cerveza</option>
+                <option value="Indio">Indio</option>
+                <option value="Tecate">Tecate</option>
+                <option value="XX Lager">XX Lager</option>
+                <option value="Modelo">Modelo</option>
+            </select>
+            <input type="number" id="cantidad7" value="0" min="0" max="10" readonly>
+            <select name="Escarchado" id="tipoEscarchado7">
+                <option value="" disabled selected>Escarchado</option>
+                <option value="Fresa">Fresa</option>
+                <option value="Mango">Mango</option>
+                <option value="Sandia">Sandia</option>
+                <option value="Mora">Mora</option>
+            </select>
+        </div>
+        </label>
+        <label class="boton">
+            <img src="img/miches8.jfif"  width="100%" height="100%" class="boton" id="incremento8">
+            <h3 id="articulo8">MANGOCHELA </h3>
+            <h3 id="precio8">$95</h3>
+            <p>Bacacho de mango, chamoy, escarchado de mango acompañado de una brocheta de manguitos</p>
+            <div class="alinear-horizontal">
+            <select name="cerveza" id="tipoCerveza8">
+                <option value="" disabled selected>Cerveza</option>
+                <option value="Indio">Indio</option>
+                <option value="Tecate">Tecate</option>
+                <option value="XX Lager">XX Lager</option>
+                <option value="Modelo">Modelo</option>
+            </select>
+            <input type="number" id="cantidad8" value="0" min="0" max="10" readonly>
+            <select name="Escarchado" id="tipoEscarchado8">
+                <option value="" disabled selected>Escarchado</option>
+                <option value="Fresa">Fresa</option>
+                <option value="Mango">Mango</option>
+                <option value="Sandia">Sandia</option>
+                <option value="Mora">Mora</option>
+            </select>
+        </div>
+        </label>
+        </form>
+        <form action="ordenar.html" class="UnaColum">
+        <label class="boton">
+            <img src="img/miches9.jpg"  width="100%" height="100%" class="boton" id="incremento9">
+            <h3 id="articulo9">SOLAPA </h3>
+            <h3 id="precio9">$65</h3>
+            <div class="alinear-horizontal">
+            <select name="cerveza" id="tipoCerveza9" class="select-grande">
+                <option value="" disabled selected>Cerveza</option>
+                <option value="Indio">Indio</option>
+                <option value="Tecate">Tecate</option>
+                <option value="XX Lager">XX Lager</option>
+                <option value="Modelo">Modelo</option>
+            </select>
+            <input type="number" id="cantidad9" value="0" min="0" max="10" readonly class="aifon">
+            <select name="" id="tipoEscarchado9" class="oculto"></select>
+        </div>
+
+        </label>
+    </form>
+
+    <h2>LOS LITROS!</h2>
+    <h3>>>>>>>>Toca la imagen para agregar<<<<<<<   <form action="ordenar.js">
+        <label class="tresColum">
+            <img src="img/litros1.jpeg"  width="100%" height="100%" class="boton" id="incremento10">
+            <h3 id="articulo10">ROSALIA</h3>
+            <h3>$80 - (1/2 $45)</h3>
+            <P>Bacacho de frambuesa y refresco de fresa-kiwi, escarchado de fresa y truena pop, acompañado con brocheta de gomitas</P>
+            <div class="alinear-horizontal">
+            <select name="cerveza" id="tamano1" class="select-grande">
+                <option value="" disabled selected>Tamaño</option>
+                <option value="1">1L</option>
+                <option value=".5">1/2L</option>
+            </select>
+            <input type="number" id="cantidad10" value="0" min="0" max="10" readonly class="aifon">
+        </div>
+        </label>
+        <label>
+            <img src="img/litros2.jpeg" width="100%" height="100%" class="boton" id="incremento11">
+            <h3>SHREK $80 - (1/2 $45)</h3>
+            <P>Vodka, jugo de piña y refresco de limón, escarchado de manzana verde, acompañado con brocheta de gomitas</P>
+            <div class="alinear-horizontal">
+                <select name="cerveza" id="TipoCerveza" class="select-grande">
+                    <option value="" disabled selected>Tamaño</option>
+                    <option value="1">1L</option>
+                    <option value=".5">1/2L</option>
+                </select>
+            <input type="number" id="cantidad11" value="0" min="0" max="10" readonly>
+        </div>
+        </label>
+        <label>
+            <img src="img/litros3.jpeg" width="100%" height="100%" class="boton" id="incremento12">
+            <h3>AZULITO $80 - (1/2 $45)</h3>
+            <p>
+                vodka, amper y powerade de mora y refresco de limón, escarchado de mora, acompañado con brocheta de gomitas
+            </p>
+            <div class="alinear-horizontal">
+                <select name="cerveza" id="TipoCerveza" class="select-grande">
+                    <option value="" disabled selected>Tamaño</option>
+                    <option value="1">1L</option>
+                    <option value=".5">1/2L</option>
+                </select>
+                <input type="number" id="cantidad12" value="0" min="0" max="10" readonly>
+        </div>
+            
+        </label>
+        <label>
+            <img src="img/litros4.jpeg" width="100%" height="100%" class="boton" id="incremento13">
+            <H3>PIÑA COLADA $80(1/2$45)</H3>
+            <p>Bacacho, crema de coco y jugo de piña</p>
+            <div class="alinear-horizontal">
+                <select name="cerveza" id="TipoCerveza" class="select-grande">
+                    <option value="" disabled selected>Tamaño</option>
+                    <option value="1">1L</option>
+                    <option value=".5">1/2L</option>
+                </select>
+                <input type="number" id="cantidad13" value="0" min="0" max="10" readonly>
+        </div>
+            
+        </label>
+        <label>
+            <img src="img/litros5.jpeg" width="100%" height="100%" class="boton" id="incremento14">
+            <h3>CANTARITO $70 ------ (1/2 $40)</h3>
+            <p>Tequila, jugo de naranja, limón, sal y refresco de toronja, escarchado de chamoy y acompañado con un tarugo</p>
+            <div class="alinear-horizontal">
+                <select name="cerveza" id="TipoCerveza" class="select-grande">
+                    <option value="" disabled selected>Tamaño</option>
+                    <option value="1">1L</option>
+                    <option value=".5">1/2L</option>
+                </select>
+                <input type="number" id="cantidad14" value="0" min="0" max="10" readonly>
+        </div>
+            
+        </label>
+        <label>
+            <img src="img/litros6.jpeg" width="100%" height="100%" class="boton" id="incremento15">
+            <h3>BABY MANGO $70 --- (1/2 $40)</h3>
+            <P>Bacacho de mango, jugo de mando y agua mineral, escarchado de mango, acompañado con brocheta de gomitas.</P>
+            <div class="alinear-horizontal">
+                <select name="cerveza" id="TipoCerveza" class="select-grande">
+                    <option value="" disabled selected>Tamaño</option>
+                    <option value="1">1L</option>
+                    <option value=".5">1/2L</option>
+                </select>
+                <input type="number" id="cantidad15" value="0" min="0" max="10" readonly>
+        </div>
+        </label>
+
+    </form>
+
+    <h2>PA' BOTANEAR!</h2>
+    <h3>>>>>>>>Toca la imagen para agregar<<<<<<<   <form action="ordenar.js">
+        <label>
+            <img src="img/botana1.jpeg" width="100%" height="100%" class="boton" id="incremento16">
+            <h3>TOSTADA DE CEVICHE $50</h3>
+            <div class="alinear-horizontal">
+            Cantidad
+            <input type="number" id="cantidad16" value="0" min="0" max="10" readonly>
+            </div>
+        </label>
+        <label>
+            <img src="img/botana2.jfif" width="100%" height="100%" class="boton" id="incremento17">
+            <H3>TOSTADA DE AGUACHILE $55</H3>
+            <div class="alinear-horizontal">
+            Cantidad
+            <input type="number" id="cantidad17" value="0" min="0" max="10" readonly>
+            </div>
+        </label>
+        <label>
+            <img src="img/botana3.jfif" width="100%" height="100%" class="boton" id="incremento18">
+            <H3>CHAROLA DE CEVICHE $105</H3>
+            <div class="alinear-horizontal">
+            Cantidad
+            <input type="number" id="cantidad18" value="0" min="0" max="10" readonly>
+        </div>
+        </label>
+        <label>
+            <img src="img/botana4.jpg" width="100%" height="100%" class="boton" id="incremento19">
+            <H3>CHAROLA DE AGUACHILE $110</H3>
+            <div class="alinear-horizontal">
+                Cantidad
+            <input type="number" id="cantidad19" value="0" min="0" max="10" readonly>
+        </div>
+        </label>
+        <label>
+            <img src="img/botana5.jfif" width="100%" height="100%" class="boton" id="incremento20">
+            <H3>NACHOS $45</H3>
+            <P>Preparados con queso y jalapeño</P>
+            <div class="alinear-horizontal">
+                Cantidad
+            <input type="number" id="cantidad20" value="0" min="0" max="10" readonly>
+        </div>
+        </label>
+        <label>
+            <img src="img/botana6.jpg" width="100%" height="100%" class="boton" id="incremento21">
+            <h3>PAPAS A LA FRANCESA $ 45</h3>
+            <P>250gr *Con queso +$10*</P>
+            <div class="alinear-horizontal">
+                <select name="Papas" id="Papas" class="select-grande">
+                    <option value="" disabled selected>Selecciona</option>
+                    <option value="Queso">Sin Queso</option>
+                    <option value="SinQueso">Con Queso</option>
+                </select>
+            <input type="number" id="cantidad21" value="0" min="0" max="10" readonly>
+            </div>
+        </label>
+        <label>
+            <img src="img/botana7.jpg" width="100%" height="100%" class="boton" id="incremento22">
+            <H3>TOSTILOCOS $50</H3>
+            <P>Tostitos verdes o flamin hot, servidos con jicama, zanahoria, pepino, churritos, cacahuates japoneses y mix de salsas con limón</P>
+            <input type="number" id="cantidad22" value="0" min="0" max="10" readonly>
+        </label>
+        <label>
+            <img src="img/botana8.jpg" width="100%" height="100%" class="boton" id="incremento23">
+            <h3>ORDEN DE ALITAS $99</h3>
+            <p>10 piezas de alitas fritas acompañadas con dos aderezos(ranch, mango habanero, búfalo, red hot, chipotle, lemon pepper y bbq) *aderezo extra $10*</p>
+            <div class="alinear-horizontal">
+                <select name="Aderezo" id="Aderezo">
+                    <option value="" disabled selected>Aderezo</option>
+                    <option value="Aderezo1">Ranch</option>
+                    <option value="Aderezo2">Mango habanero</option>
+                    <option value="Aderezo3">Búfalo</option>
+                    <option value="Aderezo4">Red hot</option>
+                    <option value="Aderezo5">Chipotle</option>
+                    <option value="Aderezo6">Lemon pepper</option>
+                    <option value="Aderezo7">BBQ</option>
+                </select>
+            <input type="number" id="cantidad23" value="0" min="0" max="10" readonly>
+        </div>
+        </label>
+        <label>
+            <img src="img/botana9.jpg" width="100%" height="100%" class="boton" id="incremento24">
+            <h3>PIZZA INDIVIDUAL $35</h3>
+            <p>Pepperoni o hawaiana</p>
+            <div class="alinear-horizontal">
+                <select name="Pizza" id="Sabor" class="select-grande">
+                    <option value="" disabled selected>Selecciona</option>
+                    <option value="Pizza1">Pepperoni</option>
+                    <option value="Pizza2">Hawaiana</option>
+                </select>
+            <input type="number" id="cantidad24" value="0" min="0" max="10" readonly>
+        </div>
+        </label>
+        <label>
+            <img src="img/botana10.jpg" width="100%" height="100%" class="boton" id="incremento25">
+            <h3>MARUCHAN $35</h3>
+            <P>Sabor habanero o chile piquín</P>
+            <div class="alinear-horizontal">
+                <select name="Maruchan" id="SaborMaruchan">
+                <option value="" disabled selected>Sabor</option>
+                <option value="Maruchan1">Habanero</option>
+                <option value="Maruchan2">Chile piquín</option>
+            </select>
+            <input type="number" id="cantidad25" value="0" min="0" max="10" readonly>
+        </div>
+        </label>
+    </form>
+
+    <h2>PROMOS!</h2>
+    <h3>>>>>>>>Toca la imagen para agregar<<<<<<<   <form action="ordenar.js" >
+        <label>
+            <img src="img/promo1.jpg" width="100%" height="100%" class="boton" id="incremento26">
+            <div class="alinear-horizontal">
+                Promos
+            <input type="number" id="cantidad26" value="0" min="0" max="10" readonly>
+        </div>
+        </label>
+        <label>
+            <img src="img/promo2.jpg" width="100%" height="100%" class="boton" id="incremento27">
+            <div class="alinear-horizontal">
+                Promos
+                <input type="number" id="cantidad27" value="0" min="0" max="10" readonly>
+        </div>
+            
+        </label>
+        <label>
+            <img src="img/promo3.jpg" width="100%" height="100%" class="boton" id="incremento28">
+            <div class="alinear-horizontal">
+                Promos
+                <input type="number" id="cantidad28" value="0" min="0" max="10" readonly>
+        </div> 
+        </label>
+        <label>
+            <img src="img/promo4.jpg" width="100%" height="100%" class="boton" id="incremento29">
+            <div class="alinear-horizontal">
+                Promos
+                <input type="number" id="cantidad29" value="0" min="0" max="10" readonly>
+        </div>
+        </label>
+        
+    </form>
+    <form action="ordenar.js" class="UnaColum" >
+        <label >
+            <img src="img/promo5.jpg" width="80%" height="80%" class="boton" id="incremento30" >
+            <div class="alinear-horizontal">
+            <select name="Promo" id="Promo" class="select-grande">
+                <option value="" disabled selected>Promoción</option>
+                <option value="Promo1">Promo $150</option>
+                <option value="Promo2">Promo $160</option>
+                <option value="Promo3">Promo $260</option>
+            </select>
+            <input type="number" id="cantidad30" value="0" min="0" max="10" readonly>
+            </div>
+        </label>
+    </form>
+
+    <h2>PA' LOS SANTOS!</h2>
+    <h3>>>>>>>>Toca la imagen para agregar<<<<<<<   <form action="ordenar.js">
+        <label>
+            <img src="img/santo1.jfif" width="100%" height="100%" class="boton" id="incremento31">
+            <h3>CLAMATO PREPRARADO 1L $50 -- (1/2 $30)</h3>
+            <P>Clamado, mix de salsas con limón y sal, acompañado de un tarugo</P>
+            <div class="alinear-horizontal">
+                Cantidad
+                <input type="number" id="cantidad31" value="0" min="0" max="10" readonly>
+            </div>
+        </label>
+        <label>
+            <img src="img/santo2.jpg" width="100%" height="100%" class="boton" id="incremento32">
+            <h3>RUSA 1L $45 - (1/2 $25)</h3>
+            <P>Agua mineral, preparado y escarchado de limón y sal</P>
+            <div class="alinear-horizontal">
+                Cantidad
+                <input type="number" id="cantidad32" value="0" min="0" max="10" readonly>
+            </div>
+            
+        </label>
+
+
+        <label>
+            <img src="img/santo3.jfif" width="100%" height="100%" class="boton" id="incremento33">
+            <h3>RUSA PREPARADA 1L $55 ---(1/2 $35)</h3>
+            <p>Clamato, mi de salsas con limón y sal y agua mineral, escarchado con chamoy, acompañado de un tarugo</p>
+            <div class="alinear-horizontal">
+                Cantidad
+                <input type="number" id="cantidad33" value="0" min="0" max="10" readonly>
+            </div>
+            
+        </label>
+        <label>
+            <img src="img/santo4.webp" width="100%" height="100%" class="boton" id="incremento34">
+            <H3>BOING $20</H3>
+            <p>250ml</p>
+            <div class="alinear-horizontal">
+                Cantidad
+                <input type="number" id="cantidad34" value="0" min="0" max="10" readonly>
+        </div>
+        </label>
+    </form>
+    <div class="vertical">
+    <input class="coment" type="text" id="comentarios" placeholder="Comentarios" value="">
+    <button class="grande" id="ordenaAqui">Ordena aqui</button>
+    </div>
+    
+</body>
+</html>
