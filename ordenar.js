@@ -32,6 +32,7 @@ document.getElementById("ordenaAqui").addEventListener("click", function () {
   const coment = document.getElementById(`comentarios`).value || "Sin comentarios";
   const toping = document.getElementById(`toping`).value;
 
+  //Este bucle guarda la informacion de las miches que está seleccionando el cliente para ordenar
   for (let i = 1; i < 10; i++) {
     const cantidadElement = document.getElementById(`cantidad${i}`);
     const precioElement = document.getElementById(`precio${i}`);
@@ -51,6 +52,26 @@ document.getElementById("ordenaAqui").addEventListener("click", function () {
         tipoCerveza: tipoCervezaElement.value,
         tipoEscarchado: tipoEscarchadoElement.value,
         precio: precioInt,
+      });
+      total += cantidadInt * precioInt;
+    }
+  }
+
+    //Este bucle guarda la informacion de los litros que está seleccionando el cliente para ordenar
+  for (let i = 10; i < 16; i++) {
+    const cantidadElement = document.getElementById(`cantidad${i}`);
+    const articuloElement = document.getElementById(`articulo${i}`);
+    const tamano = document.getElementById(`tamano${i}`).value;
+    
+    const cantidadInt = parseInt(cantidadElement.value, 10) || 0;
+    
+    if (cantidadInt > 0) {
+      
+      hasSelection = true;
+      orderData.push({
+        cantidad: cantidadInt,
+        articulo: articuloElement.textContent,
+        tamano: tamano,
       });
       total += cantidadInt * precioInt;
     }
