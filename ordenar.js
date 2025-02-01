@@ -61,9 +61,10 @@ document.getElementById("ordenaAqui").addEventListener("click", function () {
   for (let i = 10; i < 16; i++) {
     const cantidadElement = document.getElementById(`cantidad${i}`);
     const articuloElement = document.getElementById(`articulo${i}`);
-    const tamano = document.getElementById(`tamano${i}`).value;
+    const tamano = parseFloat(document.getElementById(`tamano${i}`).value.replace("$","").trim() ||0);
     
     const cantidadInt = parseInt(cantidadElement.value, 10) || 0;
+    
     
     if (cantidadInt > 0) {
       
@@ -72,8 +73,9 @@ document.getElementById("ordenaAqui").addEventListener("click", function () {
         cantidad: cantidadInt,
         articulo: articuloElement.textContent,
         tamano: tamano,
+        precio: tamano,
       });
-      total += cantidadInt * precioInt;
+      total += cantidadInt * tamano;
     }
   }
 

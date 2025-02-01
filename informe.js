@@ -9,9 +9,27 @@ if (formData) {
     resumenHTML += `
       <h4>Artículo ${index + 1}</h4>
       <p><strong>Producto:</strong> ${item.articulo}</p>
-      <p><strong>Cantidad:</strong> ${item.cantidad}</p>
-      <p><strong>Cerveza:</strong> ${item.tipoCerveza}</p>`;
-      
+      <p><strong>Cantidad:</strong> ${item.cantidad}</p>`;
+
+      if(item.tipoCerveza){
+        
+        resumenHTML += ` <p><strong>Cerveza:</strong> ${item.tipoCerveza}</p>
+        `;
+      }      
+
+      if(item.tamano){
+
+        if(item.tamano<50){
+          resumenHTML += `<p><strong>Tamaño :</strong> 1/2 L</p>
+        `;
+        }else{
+          resumenHTML += `<p><strong>Tamaño :</strong> 1 L</p>
+        `;
+        }
+        
+        
+      }
+
     if(item.tipoEscarchado){
       resumenHTML += `<p><strong>Escarchado:</strong> ${item.tipoEscarchado}</p>
       `;
