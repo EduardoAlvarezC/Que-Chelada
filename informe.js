@@ -7,7 +7,7 @@ if (formData) {
   // Mostrar los datos de los artículos de orderData
   formData.orderData.forEach((item, index) => {
     resumenHTML += `
-      <h4>Artículo ${index + 1}</h4>
+      
       <p><strong>Producto:</strong> ${item.articulo}</p>
       <p><strong>Cantidad:</strong> ${item.cantidad}</p>`;
 
@@ -16,6 +16,16 @@ if (formData) {
         resumenHTML += ` <p><strong>Cerveza:</strong> ${item.tipoCerveza}</p>
         `;
       }      
+
+      const extraItem = formData.extra.find(extra => extra.id === item.id);
+if (extraItem && extraItem.extra) {
+  resumenHTML += `<p><strong></strong> ${extraItem.extra}</p>`;
+  if(extraItem.extra.includes("Con Queso")){
+    resumenHTML += `<p><strong>Extra:</strong> $10</p>`;
+  item.precio += 10;
+  formData.total +=10;
+}
+}
 
       if(item.tamano){
 

@@ -9,7 +9,7 @@
 </head>
 <body >
     <h2>LAS MICHES!</h2>
-    <h3>>>>>>>>Toca la imagen para agregar<<<<<<<</h3>
+    <h3 class="instrucciones">>>>>Toca la imagen para agregar<<<<</h3>
     <form action="ordenar.js" id="form1">
         <label class="boton" >
             <img src="img/miches1.jpeg" width="100%" height="100%" class="boton" id="incremento1">
@@ -223,7 +223,7 @@
     </form>
 
     <h2>LOS LITROS!</h2>
-    <h3>>>>>>>>Toca la imagen para agregar<<<<<<<   <form action="ordenar.js">
+    <h3 class="instrucciones"> >>>>>Toca la imagen para agregar<<<<</h3>   <form action="ordenar.js">
         <label class="tresColum">
             <img src="img/litros1.jpeg"  width="100%" height="100%" class="boton" id="incremento10">
             <h3 id="articulo10">ROSALIA</h3>
@@ -317,11 +317,11 @@
     </form>
 
     <h2>PA' BOTANEAR!</h2>
-    <h3>>>>>>>>Toca la imagen para agregar<<<<<<<   <form action="ordenar.js">
+    <h3 class="instrucciones" > >>>Toca la imagen para agregar<<<<  </h3> <form action="ordenar.js">
         <label>
             <img src="img/botana1.jpeg" width="100%" height="100%" class="boton" id="incremento16">
             <h3 id="articulo16">TOSTADA DE CEVICHE </h3>
-            <h3> $50</h3>
+            <h3 id="precio16"> $50</h3>
             <div class="alinear-horizontal">
             Cantidad
             <input type="number" id="cantidad16" value="0" min="0" max="10" readonly>
@@ -330,7 +330,7 @@
         <label>
             <img src="img/botana2.jfif" width="100%" height="100%" class="boton" id="incremento17">
             <H3 id="articulo17">TOSTADA DE AGUACHILE </H3>
-            <h3> $55</H3>
+            <h3 id="precio17"> $55</H3>
             <div class="alinear-horizontal">
             Cantidad
             <input type="number" id="cantidad17" value="0" min="0" max="10" readonly>
@@ -339,7 +339,7 @@
         <label>
             <img src="img/botana3.jfif" width="100%" height="100%" class="boton" id="incremento18">
             <H3 id="articulo18">CHAROLA DE CEVICHE </H3>
-            <h3> $105</H3>
+            <h3 id="precio18"> $105</H3>
             <div class="alinear-horizontal">
             Cantidad
             <input type="number" id="cantidad18" value="0" min="0" max="10" readonly>
@@ -348,7 +348,7 @@
         <label>
             <img src="img/botana4.jpg" width="100%" height="100%" class="boton" id="incremento19">
             <H3 id="articulo19">CHAROLA DE AGUACHILE </H3>
-            <h3> $110</H3>
+            <h3 id="precio19"> $110</H3>
             <div class="alinear-horizontal">
                 Cantidad
             <input type="number" id="cantidad19" value="0" min="0" max="10" readonly>
@@ -357,7 +357,7 @@
         <label>
             <img src="img/botana5.jfif" width="100%" height="100%" class="boton" id="incremento20">
             <H3 id="articulo20">NACHOS </H3>
-            <h3> $45</H3>
+            <h3 id="precio20"> $45</H3>
             <P>Preparados con queso y jalapeño</P>
             <div class="alinear-horizontal">
                 Cantidad
@@ -367,13 +367,13 @@
         <label>
             <img src="img/botana6.jpg" width="100%" height="100%" class="boton" id="incremento21">
             <h3 id="articulo21">PAPAS A LA FRANCESA </h3>
-            <h3> $ 45</h3>
+            <h3 id="precio21"> $ 45</h3>
             <P>250gr *Con queso +$10*</P>
             <div class="alinear-horizontal">
-                <select name="Papas" id="Papas" class="select-grande">
+                <select name="Papas" id="extra21" class="select-grande">
                     <option value="" disabled selected>Selecciona</option>
-                    <option value="Queso">Sin Queso</option>
-                    <option value="SinQueso">Con Queso</option>
+                    <option value="Sin Queso">Sin Queso</option>
+                    <option value="Con Queso">Con Queso</option>
                 </select>
             <input type="number" id="cantidad21" value="0" min="0" max="10" readonly>
             </div>
@@ -381,24 +381,25 @@
         <label>
             <img src="img/botana7.jpg" width="100%" height="100%" class="boton" id="incremento22">
             <H3 id="articulo22">TOSTILOCOS </H3>
-            <h3> $50</H3>
+            <h3 id="precio22"> $50</H3>
             <P>Tostitos verdes o flamin hot, servidos con jicama, zanahoria, pepino, churritos, cacahuates japoneses y mix de salsas con limón</P>
             <input type="number" id="cantidad22" value="0" min="0" max="10" readonly>
         </label>
         <label>
             <img src="img/botana8.jpg" width="100%" height="100%" class="boton" id="incremento23">
-            <h3 id="articulo23">ORDEN DE ALITAS $99</h3>
+            <h3 id="articulo23">ORDEN DE ALITAS </h3>
+            <h3 id="precio23">$99</h3>
             <p>10 piezas de alitas fritas acompañadas con dos aderezos(ranch, mango habanero, búfalo, red hot, chipotle, lemon pepper y bbq) *aderezo extra $10*</p>
             <div class="alinear-horizontal">
-                <select name="Aderezo" id="Aderezo">
+                <select name="Aderezo" id="extra23">
                     <option value="" disabled selected>Aderezo</option>
-                    <option value="Aderezo1">Ranch</option>
-                    <option value="Aderezo2">Mango habanero</option>
-                    <option value="Aderezo3">Búfalo</option>
-                    <option value="Aderezo4">Red hot</option>
-                    <option value="Aderezo5">Chipotle</option>
-                    <option value="Aderezo6">Lemon pepper</option>
-                    <option value="Aderezo7">BBQ</option>
+                    <option value="Ranch">Ranch</option>
+                    <option value="Mango Habanero">Mango habanero</option>
+                    <option value="Búfalo">Búfalo</option>
+                    <option value="Red hot">Red hot</option>
+                    <option value="Chipotle">Chipotle</option>
+                    <option value="Lemon pepper">Lemon pepper</option>
+                    <option value="BBQ">BBQ</option>
                 </select>
             <input type="number" id="cantidad23" value="0" min="0" max="10" readonly>
         </div>
@@ -406,13 +407,13 @@
         <label>
             <img src="img/botana9.jpg" width="100%" height="100%" class="boton" id="incremento24">
             <h3 id="articulo24">PIZZA INDIVIDUAL </h3>
-            <h3> $35</h3>
+            <h3 id="precio24"> $35</h3>
             <p>Pepperoni o hawaiana</p>
             <div class="alinear-horizontal">
-                <select name="Pizza" id="Sabor" class="select-grande">
+                <select name="Pizza" id="extra24" class="select-grande">
                     <option value="" disabled selected>Selecciona</option>
-                    <option value="Pizza1">Pepperoni</option>
-                    <option value="Pizza2">Hawaiana</option>
+                    <option value="Pepperoni">Pepperoni</option>
+                    <option value="Hawaiana">Hawaiana</option>
                 </select>
             <input type="number" id="cantidad24" value="0" min="0" max="10" readonly>
         </div>
@@ -420,13 +421,13 @@
         <label>
             <img src="img/botana10.jpg" width="100%" height="100%" class="boton" id="incremento25">
             <h3 id="articulo25">MARUCHAN </h3>
-            <h3> $35</h3>
+            <h3 id="precio25"> $35</h3>
             <P>Sabor habanero o chile piquín</P>
             <div class="alinear-horizontal">
-                <select name="Maruchan" id="SaborMaruchan">
+                <select name="Maruchan" id="extra25">
                 <option value="" disabled selected>Sabor</option>
-                <option value="Maruchan1">Habanero</option>
-                <option value="Maruchan2">Chile piquín</option>
+                <option value="Habanero">Habanero</option>
+                <option value="Chile piquín">Chile piquín</option>
             </select>
             <input type="number" id="cantidad25" value="0" min="0" max="10" readonly>
         </div>
@@ -434,7 +435,7 @@
     </form>
 
     <h2>PROMOS!</h2>
-    <h3>>>>>>>>Toca la imagen para agregar<<<<<<<   <form action="ordenar.js" >
+    <h3  class="instrucciones">>>>>Toca la imagen para agregar<<<< </h3>  <form action="ordenar.js" >
         <label>
             <img src="img/promo1.jpg" width="100%" height="100%" class="boton" id="incremento26">
             <div class="alinear-horizontal">
@@ -482,7 +483,7 @@
     </form>
 
     <h2>PA' LOS SANTOS!</h2>
-    <h3>>>>>>>>Toca la imagen para agregar<<<<<<<   <form action="ordenar.js">
+    <h3  class="instrucciones">>>>>Toca la imagen para agregar<<<< </h3>  <form action="ordenar.js">
         <label>
             <img src="img/santo1.jfif" width="100%" height="100%" class="boton" id="incremento31">
             <h3>CLAMATO PREPRARADO 1L $50 -- (1/2 $30)</h3>

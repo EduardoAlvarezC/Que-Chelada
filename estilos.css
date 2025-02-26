@@ -108,14 +108,21 @@ p{
   margin-bottom: 4px;
 }
 h3{
+  
   margin-top: 1px;
   font-size: 15px;
   margin-bottom: 1px;
 }
+.instrucciones{
+  background-color: yellow;
+  margin-top: 5px;
+  font-size: 20px;
+  margin-bottom: 1px;
+}
 .grande{
 height: auto;
-width: 80%;
-font-size: 40px;
+width: 100%;
+font-size: 35px;
 
 }
 .UnaColum{
@@ -133,7 +140,8 @@ font-size: 40px;
   margin-top: 2%;
 }
 select{
-  width: 42%;
+  width: 40%;
+  height: 110%;;
 }
 .select-grande{
   width: 67%;

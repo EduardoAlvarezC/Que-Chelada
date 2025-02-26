@@ -32,6 +32,12 @@ document.getElementById("ordenaAqui").addEventListener("click", function () {
   const coment = document.getElementById(`comentarios`).value || "Sin comentarios";
   const toping = document.getElementById(`toping`).value;
 
+  let extra = [21,23,24,25].map(i=>({
+    id: `articulo${i}`,
+    extra: document.getElementById(`extra${i}`)?.value || ""
+  }));
+
+
   //Este bucle guarda la informacion de las miches que está seleccionando el cliente para ordenar
   for (let i = 1; i < 10; i++) {
     const cantidadElement = document.getElementById(`cantidad${i}`);
@@ -79,6 +85,28 @@ document.getElementById("ordenaAqui").addEventListener("click", function () {
     }
   }
 
+  //Este for recopila la información de la comida y la guarda en el array orderData
+  for (let i = 16; i < 26; i++) {
+    const cantidadElement = document.getElementById(`cantidad${i}`);
+    const articuloElement = document.getElementById(`articulo${i}`);
+    const precioElement = document.getElementById(`precio${i}`);
+    
+    const cantidadInt = parseInt(cantidadElement.value, 10) || 0;
+    const precio = parseFloat(precioElement.innerText.replace("$", "").trim()) || 0;
+    
+    
+    if (cantidadInt > 0) {
+      
+      hasSelection = true;
+      orderData.push({
+        cantidad: cantidadInt,
+        articulo: articuloElement.textContent,
+        precio: precio,
+        id: `articulo${i}`
+      });
+      total += cantidadInt * precio;
+    }
+  }
   if (!hasSelection) {
     alert("Selecciona un producto");
     return;
@@ -89,6 +117,7 @@ document.getElementById("ordenaAqui").addEventListener("click", function () {
     coment,
     total,
     toping,
+    extra,
   };
 
   if (JSON.stringify(formData).length < 5000) {
