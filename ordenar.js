@@ -107,6 +107,67 @@ document.getElementById("ordenaAqui").addEventListener("click", function () {
       total += cantidadInt * precio;
     }
   }
+
+  //Este for es para guardar las promociones seleccionadas y sacar el detalle completo
+  for (let i = 26; i < 30; i++) {
+    const cantidadElement = document.getElementById(`cantidad${i}`);
+    const articuloElement = document.getElementById(`articulo${i}`);
+    let precio = 0;
+    let articulo2 = "";
+    let cantidadArtic = 0;
+    
+    
+    const cantidadInt = parseInt(cantidadElement.value, 10) || 0;
+    
+    if(document.getElementById(`articulo${i}`)=== document.getElementById("articulo26")){
+      articuloElement.value = "Promo JUEVEBES";
+      precio = 140;
+      articulo2 = "Azulitos"
+      cantidadArtic = 2;
+      }
+      if(document.getElementById(`articulo${i}`)=== document.getElementById("articulo27")){
+        articuloElement.value = "Promo BEVIERNES";
+        precio = 70;
+        articulo2 = "Litro"
+        cantidadArtic = 1;
+        }
+      if(document.getElementById(`articulo${i}`)=== document.getElementById("articulo28")){
+          articuloElement.value = "Promo SABADRINK";
+          precio = 180;
+          articulo2 = "Micheladas"
+          cantidadArtic = 3;
+          }
+        if(document.getElementById(`articulo${i}`)=== document.getElementById("articulo29")){
+          articuloElement.value = "Promo CRUDOMINGO";
+          precio = 230;
+          articulo2 = "AguaChile / Cevichelada"
+          cantidadArtic = 2;
+          }
+          if(document.getElementById(`articulo${i}`)=== document.getElementById("articulo30")){
+            if(document.getElementById(articulo30).value === promo1){
+              articuloElement.value = "Promo $150";
+              precio = 150;
+              articulo2 = "AguaChile / Cevichelada"
+              cantidadArtic = 2;
+            }
+            
+            }
+    
+    
+    if (cantidadInt > 0) {
+      
+      hasSelection = true;
+      orderData.push({
+        cantidad: cantidadInt,
+        articulo: articuloElement.value,
+        precio: precio,
+        id: `articulo${i}`,
+        articulo2: articulo2,
+        cantidadArtic: cantidadArtic,
+      });
+      total += cantidadInt * precio;
+    }
+  }
   if (!hasSelection) {
     alert("Selecciona un producto");
     return;
