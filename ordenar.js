@@ -109,7 +109,43 @@ document.getElementById("ordenaAqui").addEventListener("click", function () {
   }
 
   //Este for es para guardar las promociones seleccionadas y sacar el detalle completo
-  for (let i = 26; i < 30; i++) {
+  const promos = {
+    26:{nombre: "Promo JUEVEBES", precio: 140, articulo2: "Azulitos", cantidadArtic: 2},
+    27:{nombre: "Promo BEVIERNES", precio: 70, articulo2: "Litro", cantidadArtic: 1},
+    28:{nombre: "Promo SABADRINK", precio: 180, articulo2: "Micheladas", cantidadArtic: 3},
+    29:{nombre: "Promo CRUDOMINGO", precio: 230, articulo2: "Aguachile / Cevichelada", cantidadArtic: 2},
+    30:{
+      "Promo1": {nombre: "Promo $150", precio: 150, articulo2: "AguaChile / Cevichelada", cantidadArtic: 2,},
+      "Promo2": {nombre: "Promo $160", precio: 160, articulo2: "Azulito + orden de alitas", cantidadArtic: 1,},
+      "Promo3": {nombre: "Promo $260", precio: 260, articulo2: "micheladas + orden de alitas + orden de papas", cantidadArtic: 2,},
+    }
+  };
+  for(let i = 26; i < 31; i++){
+    const cantidadInt = parseInt(document.getElementById(`cantidad${i}`).value);
+    const articuloElement = document.getElementById(`articulo${i}`);
+
+    let promoData;
+    if(i === 30){
+      const  promoSeleccionada = document.getElementById(`promos`).value;
+      promoData = promos[30][promoSeleccionada]
+    }else{
+      promoData = promos[i];
+    }
+    
+    if(promoData){
+      articuloElement.value = promoData.nombre;
+      const precio = promoData.precio;
+      const articulo2 = promoData.articulo2;
+      const cantidadArtic = promoData.cantidadArtic;
+    
+  
+
+
+
+
+
+
+  /*for (let i = 26; i < 31; i++) {
     const cantidadElement = document.getElementById(`cantidad${i}`);
     const articuloElement = document.getElementById(`articulo${i}`);
     let precio = 0;
@@ -122,36 +158,48 @@ document.getElementById("ordenaAqui").addEventListener("click", function () {
     if(document.getElementById(`articulo${i}`)=== document.getElementById("articulo26")){
       articuloElement.value = "Promo JUEVEBES";
       precio = 140;
-      articulo2 = "Azulitos"
+      articulo2 = "Azulitos";
       cantidadArtic = 2;
       }
       if(document.getElementById(`articulo${i}`)=== document.getElementById("articulo27")){
         articuloElement.value = "Promo BEVIERNES";
         precio = 70;
-        articulo2 = "Litro"
+        articulo2 = "Litro";
         cantidadArtic = 1;
         }
       if(document.getElementById(`articulo${i}`)=== document.getElementById("articulo28")){
           articuloElement.value = "Promo SABADRINK";
           precio = 180;
-          articulo2 = "Micheladas"
+          articulo2 = "Micheladas";
           cantidadArtic = 3;
           }
         if(document.getElementById(`articulo${i}`)=== document.getElementById("articulo29")){
           articuloElement.value = "Promo CRUDOMINGO";
           precio = 230;
-          articulo2 = "AguaChile / Cevichelada"
+          articulo2 = "AguaChile / Cevichelada";
           cantidadArtic = 2;
           }
           if(document.getElementById(`articulo${i}`)=== document.getElementById("articulo30")){
-            if(document.getElementById(articulo30).value === promo1){
+            if(document.getElementById(`promos`).value === "Promo1"){
               articuloElement.value = "Promo $150";
               precio = 150;
-              articulo2 = "AguaChile / Cevichelada"
+              articulo2 = "AguaChile / Cevichelada";
+              cantidadArtic = 2;
+            }
+            if(document.getElementById(`promos`).value === "Promo2"){
+              articuloElement.value = "Promo $160";
+              precio = 160;
+              articulo2 = "Azulito + orden de alitas";
+              cantidadArtic = 1;
+            }
+            if(document.getElementById(`promos`).value === "Promo3"){
+              articuloElement.value = "Promo $260";
+              precio = 260;
+              articulo2 = "micheladas + orden de alitas + orden de papas";
               cantidadArtic = 2;
             }
             
-            }
+            }*/
     
     
     if (cantidadInt > 0) {
@@ -166,6 +214,7 @@ document.getElementById("ordenaAqui").addEventListener("click", function () {
         cantidadArtic: cantidadArtic,
       });
       total += cantidadInt * precio;
+      }
     }
   }
   if (!hasSelection) {
