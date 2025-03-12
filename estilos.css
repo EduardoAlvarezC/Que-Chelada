@@ -173,3 +173,7 @@ select{
   font: 100px;
 }
 
+#qrcode {
+  margin: 20px auto;
+  text-align: center;
+}

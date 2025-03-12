@@ -82,3 +82,39 @@ if (formData) {
         <p>No se encontró información de la orden.</p>
     `;
 }
+
+
+
+// Asegúrate de tener la librería QRCode.js incluida en tu proyecto
+document.getElementById("generarOrden").addEventListener("click", function () {
+    // Obtener los datos de la orden desde sessionStorage
+    const formData = JSON.parse(sessionStorage.getItem("formData"));
+
+    if (!formData) {
+        alert("No hay datos de la orden para generar el QR.");
+        return;
+    }
+
+    // Codificar los datos para la URL
+    const orderDataEncoded = encodeURIComponent(JSON.stringify(formData.orderData));
+    const comentEncoded = encodeURIComponent(formData.coment);
+    const totalEncoded = encodeURIComponent(formData.total);
+    const topingEncoded = encodeURIComponent(formData.toping);
+    const extraEncoded = encodeURIComponent(JSON.stringify(formData.extra));
+
+    // Construir la URL
+    const baseUrl = window.location.origin + "/ordenQR.html"; // Ajusta la ruta si es necesario
+    const url = `${baseUrl}?orderData=${orderDataEncoded}&coment=${comentEncoded}&total=${totalEncoded}&toping=${topingEncoded}&extra=${extraEncoded}`;
+
+    // Generar el código QR
+    let qrCodeDiv = document.getElementById("qrcode");
+    if (qrCodeDiv) {
+        qrCodeDiv.innerHTML = ""; // Limpiar QR anterior
+    }
+
+    new QRCode(qrCodeDiv, {
+        text: url,
+        width: 256,
+        height: 256
+    });
+});

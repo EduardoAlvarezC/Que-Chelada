@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orden</title>
+    <title>Orden desde QR</title>
     <link rel="stylesheet" href="estilos.css">
-    <script src="informe.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
-    
+    <script src="ordenQR.js" defer></script>
 </head>
 <body>
     <h2 class="informe">Información de la orden</h2>
@@ -16,8 +14,5 @@
         <div class="div-informe" id="comentarios"></div>
         <div class="div-informe" id="totalOrden"></div>
     </label>
-    <button class="grande" id="generarOrden">Generar orden</button>
-
-    <div id="qrcode"></div>
 </body>
 </html>
